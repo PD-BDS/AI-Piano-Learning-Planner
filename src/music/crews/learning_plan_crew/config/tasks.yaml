@@ -1,0 +1,23 @@
+research_topic:
+  description: >
+    Research about how to learn piano based on different user level to gather the most important information that will 
+    be useful in creating a learning module outline. Ensure you focus on high-quality, reliable sources.
+
+    Here is the user's current level at piano skills, and goal to achieve in learning piano:\n\n {userprofile}
+  expected_output: >
+    A set of key topics about learning piano that will be used to create the learning plan outline.
+  agent: researcher
+
+generate_outline:
+  description: >
+    Create a learning plan outline with modules in sequential order based on the research findings. 
+    Ensure that each module has a title and a brief description that highlights the topics and subtopics to be covered.
+    It's important to note that each module is only going to be 3,000 words or less.
+    Also, make sure that you do not duplicate any modules or topics in the outline.
+
+    Here is the user's current level at piano skills, and goal to achieve in learning piano:\n\n {userprofile}
+    
+  expected_output: >
+    A 3 months outline of piano learning module containing musical theory, examples and practice guideline of what each weekly module will contain.
+
+  agent: outliner

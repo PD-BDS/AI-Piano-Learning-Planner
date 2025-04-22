@@ -1,0 +1,35 @@
+research_module:
+  description: >
+    Research the provided module topic, title, and outline to gather additional content that will be helpful in creating the learning module.
+    Ensure you focus on reliable, high-quality sources of information.
+
+    Here is the user's current level at piano skills, and goal to achieve in learning piano:\n\n {userprofile}.
+    Here is the outline description for the module:\n\n {module_description}
+
+    When researching, consider the following key points:
+    - you need to gather enough information to write a 3,000-word module
+    - The module you are researching needs to fit in well with the rest of the modules in the book.
+
+    Here is the outline of the entire learning plan:\n\n
+    {learning_plan_outline}
+  expected_output: >
+    A set of additional insights and information that can be used in creating the learning modules.
+  agent: researcher
+
+write_module:
+  description: >
+    Write a well-structured module based on the user profile, module title and module outline. 
+    Each module should be written in markdown and should contain around 3,000 words.
+
+    Here is the user profile:n\n {userprofile}
+    Here is the title of the module:n\n {module_title}
+    Here is the outline description for the module:\n\n {{module_description}}
+
+    Important notes:
+    - The module you are writing needs to fit in well with the rest of the modules in the learning plan.
+
+    Here is the outline of the entire learning plan:\n\n
+    {learning_plan_outline}
+  expected_output: >
+    A markdown-formatted module of around 3,000 words that covers the provided module title and outline description.
+  agent: writer
